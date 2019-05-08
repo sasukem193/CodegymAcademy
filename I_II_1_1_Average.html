@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <style>
+  #prompt {color: red;}
+  </style>
+  <div id="prompt">
+  <script>
+    let inputPhi;
+    let inputChe;
+    let inputBio;
+    inputPhi = prompt("Nhập điểm Lý");
+    inputChe = prompt("Nhập điểm Hóa");
+    inputBio = prompt("Nhập điểm Sinh");
+    let Phi= parseInt(inputPhi);
+    let Che= parseInt(inputChe);
+    let Bio= parseInt(inputBio);
+    let Ave= Math.round ((Phi+Che+Bio)/3);
+    document.write('Your average point is:  '+ Ave);
+  </script>
+   </div>
+</body>
+</html>                   
