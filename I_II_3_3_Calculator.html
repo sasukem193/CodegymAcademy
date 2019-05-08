@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    #button {
+      width: 50px;
+      height: 50px;
+    }
+
+    #formula {
+      width: 210px;
+      height: 50px;
+      font-size: 30px;
+    }
+  </style>
+  <form>
+    <input type="text" id="formula"> </br></br>
+    <input id="button" type="button" value="1" onclick="formula.value += '1'">
+    <input id="button" type="button" value="2" onclick="formula.value += '2'">
+    <input id="button" type="button" value="3" onclick="formula.value += '3'">
+    <input id="button" type="button" value="+" onclick="formula.value += '+'"></br>
+    <input id="button" type="button" value="4" onclick="formula.value += '4'">
+    <input id="button" type="button" value="5" onclick="formula.value += '5'">
+    <input id="button" type="button" value="6" onclick="formula.value += '6'">
+    <input id="button" type="button" value="-" onclick="formula.value += '-'"></br>
+    <input id="button" type="button" value="7" onclick="formula.value += '7'">
+    <input id="button" type="button" value="8" onclick="formula.value += '8'">
+    <input id="button" type="button" value="9" onclick="formula.value += '9'">
+    <input id="button" type="button" value="*" onclick="formula.value += '*'"></br>
+    <input id="button" type="button" value="c" onclick="formula.value = ' '">
+    <input id="button" type="button" value="0" onclick="formula.value += '0'">
+    <input id="button" type="button" value="=" onclick="formula.value = eval(formula.value)">
+    <input id="button" type="button" value="/" onclick="formula.value += '/'">
+  </form>
+</body>
+
+</html>
