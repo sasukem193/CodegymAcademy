@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <form>
+    <input type="number" id="x">
+    <input type="number" id="y">
+  </form>
+  <button type="button" onclick="multiple()">Multiplication (*)</button>
+  <button type="button" onclick="divide()">Division (/)</button>
+  <button type="button" onclick="plus()">Addition (+)</button>
+  <button type="button" onclick="minus()">Subtraction (-)</button>
+  <p id="result" style="color:red"></p>
+  <script>
+    function multiple() {
+      let x = parseFloat(document.getElementById("x").value);
+      let y = parseFloat(document.getElementById("y").value);
+      let z = x * y;
+      document.getElementById("result").innerHTML = "Your result is: " + z;
+    }
+    function divide() {
+      let x = parseFloat(document.getElementById("x").value);
+      let y = parseFloat(document.getElementById("y").value);
+      let z = x / y;
+      document.getElementById("result").innerHTML = "Your result is: " + z;
+    }
+    function plus() {
+      let x = parseFloat(document.getElementById("x").value);
+      let y = parseFloat(document.getElementById("y").value);
+      let z = x + y;
+      document.getElementById("result").innerHTML = "Your result is: " + z;
+    }
+    function minus() {
+      let x = parseFloat(document.getElementById("x").value);
+      let y = parseFloat(document.getElementById("y").value);
+      let z = x - y;
+      document.getElementById("result").innerHTML = "Your result is: " + z;
+    }
+  </script>
+
+</body>
+
+</html>
