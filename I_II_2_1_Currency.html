@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form>
+    <label>Amount: </label>
+    <input type="number" id=amount>
+    <select id= "from">
+        <option value="23000">VietNam (VND)</option>
+        <option value="6.76">China (CNY)</option>
+        <option value="1">America (USD)</option>
+    </select>
+    <p1>=</p1>
+    <input id = "result">
+    <select id="to">
+        <option value="1">America (USD)</option>
+        <option value="6.76">China (CNY)</option>
+        <option value="23000">VietNam (VND)</option>
+    </select>
+    <button type="button" onclick="myFunction()">Convert</button>
+  </form>
+
+  
+  <script>
+      function myFunction() {
+         let amount= document.getElementById("amount").value;
+         let from= document.getElementById("from").value;
+         let to= document.getElementById("to").value;
+         let y=(amount*to/from);
+        document.getElementById("result").value = y;
+      }
+    </script>
+
+</body>
+</html>                   
