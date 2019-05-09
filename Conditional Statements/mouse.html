@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body onload ="init()">
+        <form>
+                <img id="myImage" src="https://orig00.deviantart.net/6df1/f/2016/201/7/a/untitled_by_puppelove-daapci9.png" />
+                <p>Click button below to move the image to right</p>
+                <input type="button" value="moveLeft" onclick="moveLeft()" />
+                <input type="button" value="moveRight" onclick="moveRight()" />
+                
+            </form>
+<script>
+function init() {
+    imgObj = document.getElementById('myImage');
+    imgObj.style.position = 'relative';
+    imgObj.style.left = '0px';
+}
+function moveRight() {
+    imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+}
+function moveLeft() {
+    imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
+}
+
+</script>
+
+    </body>
+
+</html>

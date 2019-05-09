@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $("p").hover(function(){
+            $(this).hide();
+          });
+        });
+        </script>
+</head>
+
+<body>
+    <h2> DO YOU LOVE ME ?</h2>
+    <button id="yes" onclick="okay()">YES</button>
+    <button id="no" onmousemove="move_position()" style="position: absolute;left:200px; top:67 px">NO</button>
+    <p>Let me thinking</p>
+    <script>
+        function okay() {
+            alert("<3")
+        }
+
+        function move_position() {
+            let position = document.getElementById("no").style;
+            position.top = Math.random() * window.innerHeight + 'px';
+            position.left = Math.random() * window.innerWidth + 'px';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label> Your Weight (kg): </label><br>
+        <input type="number" id="weight" /><br>
+        <label> Your Height (m): </label><br>
+        <input type="number" id="height" /><br><br>
+        <button  onclick="checkBMI()">Check your BMI</button>
+    </form>
+    <script>
+        function checkBMI() {
+            let weight = parseFloat(document.getElementById("weight").value);
+            let height = parseFloat(document.getElementById("height").value);
+            let bmi = weight / (height * height);
+            let judge= "";
+            if (bmi < 18.5)
+                judge = "You are Underweight";
+            else if (bmi < 25)
+                judge = "You are Nomal";
+            else if (bmi < 30)
+                judge = "You are Overweight";
+            else 
+                judge = "You are Obese";
+            alert (judge);
+        }
+
+    </script>
+</body>
+
+</html>

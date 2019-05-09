@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label> Month: </label>
+        <input type="number" id="month" min="1" max="12"  /><br><br>
+        <button onclick="check_day_in_month()">Check total Day in this Month</button>
+    </form>
+    <script>
+        function check_day_in_month() {
+            let month = parseFloat(document.getElementById('month').value);
+            let totalday;
+            switch (month) {
+                case 2:
+                    totalday = "28 or 29";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    totalday = "30";
+                    break;
+                default:
+                    totalday = "31";
+            }
+            alert('We have '+totalday+' days in month '+month);
+        }
+
+    </script>
+</body>
+
+</html>

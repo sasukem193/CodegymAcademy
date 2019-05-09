@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body onload="docReady()">
+        <img id="sharingan" src="https://vignette.wikia.nocookie.net/naruto/images/2/2e/180px-Sharingan_Triple.svg.png/revision/latest?cb=20100520113225&path-prefix=vi" style="position: relative;left:0; top:0;" height="100" width="100"/>
+<script>
+function upArrowPressed() {
+    let element = document.getElementById("sharingan");
+    element.style.top = parseInt(element.style.top) - 50 + 'px';
+}
+function downArrowPressed() {
+    var element = document.getElementById("sharingan");
+    element.style.top = parseInt(element.style.top) + 50 + 'px';
+}
+function leftArrowPressed() {
+    var element = document.getElementById("sharingan");
+    element.style.left = parseInt(element.style.left) - 50 + 'px';
+}
+function rightArrowPressed() {
+    var element = document.getElementById("sharingan");
+    element.style.left = parseInt(element.style.left) + 50 + 'px';
+
+}
+function moveSelection(evt) {
+    switch (evt.keyCode) {
+        case 37:
+            leftArrowPressed();
+            break;
+        case 39:
+            rightArrowPressed();
+            break;
+        case 38:
+            upArrowPressed();
+            break;
+        case 40:
+            downArrowPressed();
+            break;
+    }
+}
+function docReady() {
+    window.addEventListener('keydown', moveSelection);
+}
+</script>
+
+    </body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Personal information:</legend>
+            Username:<br>
+            <input id=username type="text"><br>
+            Password:<br>
+            <input id=password type="password"><br><br>
+            <button type="button" onclick="login()">Login</button>
+        </fieldset>
+    </form>
+
+    <script>
+        function login() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let message;
+            if (username == "admin" && password == "admin123") {
+                message = 'Login successed';
+            }
+            else if (username == 'admin' || password == 'admin123') {
+                message = 'Your username or your password is wrong';
+            }
+            else {
+                message = 'I dont know who you are';
+            }
+            alert(message);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript switch</h2>
+
+<p id="demo" style="color:red"></p>
+
+<script>
+var x = prompt("enter your name");
+
+switch (x) {
+  case 'admin':
+    text = "Okay my boss";
+    break;
+  case 'guest':
+    text = "Welcome";
+    break;
+  default:
+    text = "Who you are ?";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>

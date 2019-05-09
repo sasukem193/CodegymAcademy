@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="change_img1()">
+        <img id="img1" name="1"
+            src="https://photo-1-baomoi.zadn.vn/w300_r3x2/2019_05_03_119_30577575/deab621db95c5002094d.jpg"
+            style="height: 200px; width: 250px">
+    </button><br>
+    <button onclick="change_img2()">
+        <img id="img2" name="2"
+            src="https://cdn.tuoitre.vn/thumb_w/586/2019/3/18/2019-03-17t213918z235198041rc11343e6a90rtrmadp3soccer-spain-bet-fcb-15528604573871472531362.jpg"
+            style="height: 200px; width: 250px">
+    </button><br>
+    <p id="result" style="color:red"></p>
+    <script>
+        function change_img1() {
+            imgObj = document.getElementById('img1');
+            if (imgObj.src == "https://photo-1-baomoi.zadn.vn/w300_r3x2/2019_05_03_119_30577575/deab621db95c5002094d.jpg") {
+                imgObj.src = "https://cdn.tuoitre.vn/thumb_w/586/2019/3/18/2019-03-17t213918z235198041rc11343e6a90rtrmadp3soccer-spain-bet-fcb-15528604573871472531362.jpg";
+                imgObj.name = "2";
+            }
+            else {
+            imgObj.src = "https://photo-1-baomoi.zadn.vn/w300_r3x2/2019_05_03_119_30577575/deab621db95c5002094d.jpg";
+                imgObj.name = "1";
+            }
+            imgObj1 = document.getElementById('img1').name;
+            imgObj2 = document.getElementById('img2').name;
+            if (imgObj1 == imgObj2) {
+                document.getElementById("result").innerHTML = "the same image";
+            } else document.getElementById("result").innerHTML = "";
+        }
+        function change_img2() {
+            imgObj = document.getElementById('img2');
+            if (imgObj.src == "https://photo-1-baomoi.zadn.vn/w300_r3x2/2019_05_03_119_30577575/deab621db95c5002094d.jpg") {
+                imgObj.src = "https://cdn.tuoitre.vn/thumb_w/586/2019/3/18/2019-03-17t213918z235198041rc11343e6a90rtrmadp3soccer-spain-bet-fcb-15528604573871472531362.jpg";
+                imgObj.name = "2";
+            }
+            else {
+            imgObj.src = "https://photo-1-baomoi.zadn.vn/w300_r3x2/2019_05_03_119_30577575/deab621db95c5002094d.jpg";
+                imgObj.name = "1";
+            }
+            imgObj1 = document.getElementById('img1').name;
+            imgObj2 = document.getElementById('img2').name;
+            if (imgObj1 == imgObj2) {
+                document.getElementById("result").innerHTML = "the same image";
+            } else document.getElementById("result").innerHTML = "";
+        }
+
+    </script>
+</body>
+
+</html>
