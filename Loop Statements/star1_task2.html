@@ -1,0 +1,25 @@
+<html>
+
+<body>
+  <h2>Thanks</h2>
+  <script>
+    let temp = prompt("Input the temperature");
+    console.log(temp);
+    if (temp != " ") {
+      while (temp > 100 || temp < 20) {
+        if (temp > 100) {
+          temp = prompt("please reduce temperature < 100 ")
+        }
+        else {
+          temp = prompt("please raise temperature > 20 ")
+        }
+      }
+      alert("the temperature " + temp + " is accepted.")
+    }
+    else {
+      alert("Input temperature")
+    }
+  </script>
+</body>
+
+</html>

@@ -11,24 +11,26 @@
 <body>
     <button onclick="change_img1()">
         <img id="img1" name="1"
-            src="https://photo-1-baomoi.zadn.vn/w300_r3x2/2019_05_03_119_30577575/deab621db95c5002094d.jpg"
+            src="./1.jpg"
             style="height: 200px; width: 250px">
     </button><br>
     <button onclick="change_img2()">
         <img id="img2" name="2"
-            src="https://cdn.tuoitre.vn/thumb_w/586/2019/3/18/2019-03-17t213918z235198041rc11343e6a90rtrmadp3soccer-spain-bet-fcb-15528604573871472531362.jpg"
+            src="2.jpg"
             style="height: 200px; width: 250px">
     </button><br>
     <p id="result" style="color:red"></p>
     <script>
         function change_img1() {
             imgObj = document.getElementById('img1');
-            if (imgObj.src == "https://photo-1-baomoi.zadn.vn/w300_r3x2/2019_05_03_119_30577575/deab621db95c5002094d.jpg") {
-                imgObj.src = "https://cdn.tuoitre.vn/thumb_w/586/2019/3/18/2019-03-17t213918z235198041rc11343e6a90rtrmadp3soccer-spain-bet-fcb-15528604573871472531362.jpg";
+
+            if (imgObj.src == "http://127.0.0.1:5500/Conditional%20Statements/1.jpg") {
+                imgObj.src = "2.jpg";
                 imgObj.name = "2";
+                
             }
             else {
-            imgObj.src = "https://photo-1-baomoi.zadn.vn/w300_r3x2/2019_05_03_119_30577575/deab621db95c5002094d.jpg";
+            imgObj.src = "1.jpg";
                 imgObj.name = "1";
             }
             imgObj1 = document.getElementById('img1').name;

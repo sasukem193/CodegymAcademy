@@ -1,0 +1,39 @@
+<html>
+
+<body>
+    <h2>Caro-Minigame</h2>
+    <p id="board"></p>
+    <button onclick="change()">Change</button>
+    <script>
+        let m = 10; //cột
+        let n = 10; //hàng
+        let y = "";
+        let board = [];
+        for (let i = 0; i < n; i++) {
+            board[i] = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        }
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < m; j++) {
+                y += board[i][j] + " ";
+            }
+            y += "<br> ";
+        }
+        document.getElementById("board").innerHTML = (y);
+        function change() {
+            let row = prompt("nhập hàng");
+            let col = prompt("nhập cột");
+            board[row-1][col-1] = "x";
+            let y = "";
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < m; j++) {
+                    y += board[i][j] + " ";
+                }
+                y += "<br> ";
+            }
+            document.getElementById("board").innerHTML = (y);
+        }
+    
+    </script>
+</body>
+
+</html>

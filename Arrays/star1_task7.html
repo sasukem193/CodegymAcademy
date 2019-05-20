@@ -1,0 +1,27 @@
+<html>
+
+<body>
+    <h2>Task7</h2>
+    <script>
+        let input = parseInt(prompt("Nhập vào một số thử xem"));
+        let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        oldarray = array.join();
+        document.write("<hr>" + "Chuỗi gốc là: " + oldarray + "<br>");
+        let result = input + " không nằm trong chuỗi trên.";
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == input) {
+                for (i; i < array.length; i++) {
+                    array[i] = array[i + 1]
+                }
+                array[(array.length - 1)]= 0;
+                result = "Anh " + input + " đã bị xóa";
+                newarray = array.join();
+                document.write("Chuỗi mới là: " + newarray + "<br>");
+            }
+        }
+        document.write(result);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<html>
+<body>
+    <style>
+        td {
+            text-align: center;
+            height: 30px;
+            width: 50px;
+        }
+    </style>
+    <h2>Faking Keys</h2>
+    <textarea onkeypress="key()" id="ps" rows="10" cols="50" placeholder="Sổ sách"></textarea>
+    <script>
+        let text = "70% Cơ Thể Là Nước !";
+        let str = text.toString();
+        let keypress = "";
+        let i = 0;
+        let myvar;
+        function key() {
+            myvar = setTimeout(act, 1);
+        }
+        function act() {
+            keypress += str[i];
+            document.getElementById("ps").value = keypress;
+            i++;
+            if (i == text.length) {
+                keypress = "";
+                i = 0;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

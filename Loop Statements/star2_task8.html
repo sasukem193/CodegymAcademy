@@ -1,0 +1,38 @@
+<html>
+<h2>Mini-Game</h2>
+
+<body>
+  <button onclick="play()">
+    Play Now
+  </button>
+  <script>
+    function play() {
+      let max = prompt("Please enter the range for your number");
+      let random = Math.floor(Math.random() * max);
+      console.log(random);
+      let input = prompt("Get your number from 0 to "+(max-1));
+
+      let count = 1;
+      while (input != random && count < 3) {
+        if (input > random) {
+          alert("please going down");
+          input = prompt("Get again, you just have 3 times");
+          count++;
+        }
+        else {
+          alert("please going up");
+          input = prompt("Get again, you just have only 3 times");
+          count++;
+        }
+      }
+      if (count == 3 && input != random) {
+        alert("Bad, maximun just 3 times")
+      }
+      else {
+        alert("Your input: " + input + " was matched with the Random")
+      }
+    }
+  </script>
+</body>
+
+</html>

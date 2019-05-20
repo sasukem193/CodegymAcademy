@@ -1,0 +1,22 @@
+<html>
+<body>
+  <h2>Fibonacci</h2>
+  <script>
+      let total=0;
+      let count=0;
+      let x=0;
+      while(count<30){
+        x++;
+        while(x%7!=0){
+          x++;
+        }
+        document.write(x + "<br>");
+        total += x;
+        count++;
+        
+      }
+      document.write("<hr>");
+    document.write("Tổng các số chia hết cho 7 trên là: "+total);
+  </script>
+</body>
+</html>

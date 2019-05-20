@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    <h2>Translation</h2>
+    <label>Tiếng Anh</label>
+    <input id="english" type="text" />
+    <button onclick="trans()">Dịch</button>
+    <p id="result"></p>
+    <script>
+        let english = ["apple", "banana", "grape", "orange", "coconut", "strawberry", "cherry"];
+        let vietnamese = ["táo", "chuối", "nho", "cam", "dừa", "dâu", "cherry"];
+        function trans() {
+            text = document.getElementById("english").value;
+            let position;
+            let vietnam;
+            for (let i = 0; i < english.length; i++) {
+                if (text == english[i]) {
+                    position = i;
+                }
+            }
+            vietnam = vietnamese[position];
+            document.getElementById("result").innerHTML = "Tiếng Việt: "+vietnam;
+        }
+
+    </script>
+</body>
+
+</html>

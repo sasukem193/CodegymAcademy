@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <h2>Task7</h2>
+    <script>
+        let array = [9, 3, 7, 6, 4, 9, 8, 4, 7, 1];
+        oldarray = array.join();
+        document.write("<hr>" + "Chuỗi gốc là: " + oldarray + "<br>");
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array.length; j++)
+                if (array[i] < array[j]) {
+                    x= array[i];
+                    array[i] = array[j];
+                    array[j] = x;
+                    console.log(array[i]);
+                }
+            }
+            newarray = array.join();
+            document.write("Chuỗi mới là: " + newarray + "<br>");
+        
+
+
+    </script>
+</body>
+
+</html>

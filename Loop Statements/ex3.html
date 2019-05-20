@@ -1,0 +1,18 @@
+<html>
+
+<body>
+  <h2>Tổng các phần tử từ 1 đến số vừa nhập vào là:</h2>
+  <script>
+    let number ;
+    let total = 0;
+    while (number !== -1) {
+      number = parseInt(prompt("Nhập số, kết thúc với giá trị -1 bạn sẽ có tổng"));
+      console.log(number);
+      document.write("Số nhập là " + number + "<br>");
+      total += number;
+    }
+    document.write("Tổng: "+total);
+  </script>
+</body>
+
+</html>
