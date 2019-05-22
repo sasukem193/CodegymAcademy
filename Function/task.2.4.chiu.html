@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-
 <body>
-
     <script>
         let input = prompt("Input a number");
         let result = check_number();
         function check_number() {
-            if (input + 0 == input) { alert("aaa") }
-            else { alert("vvv") }
+            if (isNaN(input)) { alert("chữ") }
+            else { alert("số") }
         }
-
-
     </script>
 </body>
 
