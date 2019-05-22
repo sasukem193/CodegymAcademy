@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <script>
+        let number = prompt("Input a number");
+        let result = cal_factorial();
+        function cal_factorial() {
+            let factorial = 1;
+            for (i = 0; i < number; i++) {
+                factorial *= (number - i);
+            }
+            alert(number + "! = " + factorial);
+        }
+
+    </script>
+</body>
+
+</html>

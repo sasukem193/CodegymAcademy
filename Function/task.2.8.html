@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <script>
+        let array = [];
+        for (i = 0; i < 5; i++) {
+            array[i] = prompt("We need " + (5 - i) + " number");
+        }
+        let result = reversed();
+        function reversed() {
+            oldarray = array;
+            newarray = array.reverse();
+            return alert("Old array: " + oldarray + " - New array: " + newarray)
+        }
+
+
+    </script>
+</body>
+
+</html>

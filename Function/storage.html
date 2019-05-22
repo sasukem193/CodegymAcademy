@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let arrayCat =[];
+arrayCat["Phone"] =["Iphone", "Samsung", "Huawei", "Sony"];
+arrayCat["Lap"] =["Mac", "Dell", "HP", "Accer"];
+arrayCat["Clock"] =["Rolex", "Casio", "Tissot", "Orient"];
+let test =show_product()
+function show_product(){
+    for( let a in arrayCat){
+        for (let b in arrayCat[a]) 
+        console.log(arrayCat[a][b]);  
+    }
+        
+     
+    
+}
+function add_product(){
+    let yourCat= prompt("What's Cat?");
+    let yourProduct= prompt("What's Produc?");
+    arrayCat[yourCat]= yourProduct;
+}
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <script>
+        let number1 = prompt("Input a ");
+        let number2 = prompt("Input b");
+        let result = check_number();
+        function check_number() {
+            let term = number1;
+            number1 = number2;
+            number2 = term;
+            (alert("Swap a= " + number1 + " b= " + number2))
+        }
+
+    </script>
+</body>
+
+</html>

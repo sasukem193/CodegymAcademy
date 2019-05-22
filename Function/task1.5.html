@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <script>
+        let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function getYourStar() {
+            theStar = prompt("Get for you 1 star");
+            let result = "I don't know what exactly you are talking about";
+            for (i = 0; i < star.length; i++) {
+                if (star[i] == theStar) {
+                    result = theStar + "is a " + constellation[i] + " constellation";
+                }
+            }
+            alert(result);
+        }
+        let letstart = getYourStar();
+    </script>
+</body>
+
+</html>

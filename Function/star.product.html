@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>List Product</title>
+</head>
+
+<body>
+    <p id="show"></p>
+    <script>
+        let arrayCat = [];
+        arrayCat["Phone"] = ["Iphone", "Samsung", "Huawei", "Sony"];
+        arrayCat["Laptop"] = ["Mac", "Dell", "HP", "Acces"];
+        arrayCat["Watch"] = ["Rolex", "Casio", "Tissot", "Orient"];
+        let arrayTrans = ["Phone", "Laptop", "Watch"];
+        let begin = show_product()
+        function show_product() {
+            let count = 0;
+            let data;
+            data = "<table  width='300' cellspacing='0 ' cellpadding='3'>";
+            for (let catalogue in arrayCat) {
+                data = data + "<tr>";
+                count++;
+                data += '<td>' + '<div style="color: red">' + catalogue + "</td>" + "<td>" + '<button onclick="add_product(' + count + ')">Add Product</button>' + '</div>' + '</td>';
+                data = data + "</tr>";
+                for (let i = 0; i < arrayCat[catalogue].length; i++) {
+                    let n = arrayCat[catalogue][i];
+                    data += "<tr>" + "<td>" + n + "</td>" + "<td>" + '<button onclick="edit_product(' + count + "," + i + ')">Edit</button>' + "</td>" + "<td>" + '<button onclick="del_product(' + count + "," + i + ')">Del</button>' + "</td>" + "</tr>";
+                }
+                data = data + "</tr>";
+            }
+            data = data + "</table>";
+            document.getElementById("show").innerHTML = data + "<br>";
+        }
+        function del_product(a, b) {
+            y = arrayTrans[a - 1];
+            arrayCat[y].splice(b, 1);
+            show_product();
+        }
+        function edit_product(a, b) {
+            y = arrayTrans[a - 1];
+            let input = prompt("Change your product")
+            arrayCat[y][b] = input;
+            show_product();
+        }
+        function add_product(a) {
+            let yourProduct = prompt("What Product Do You Need To ADD?");
+            y = arrayTrans[a - 1];
+            arrayCat[y].push(yourProduct);
+            show_product()
+        }
+    </script>
+</body>
+
+</html>

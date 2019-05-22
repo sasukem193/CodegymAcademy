@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let array = [];
+        for (i = 0; i < 7; i++) {
+            array[i] = prompt("We need " + (7 - i) + " characters");
+        }
+        let char = prompt("We need a character");
+        let result = check();
+        function check() {
+            let count = 0;
+            for (i = 0; i < 7; i++) {
+                if (array[i] == char) {
+                    count++;
+                }
+            }
+            if (count != 0) {
+                alert(char + " apper in Array with " + count + " time/s")
+            } else { alert(char + " does not belong to  Array ") }
+        }
+
+    </script>
+</body>
+
+</html>
