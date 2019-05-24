@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle</title>
+</head>
+
+<body>
+        <p id="result"></p>
+    <canvas id="myCanvas" width="500px" height="500px" style="border:1px solid #d3d3d3;">
+    
+</body>
+<script>
+    function Rectangle(width, height) {
+
+        this.getArea = function () {
+            return width * height;
+        }
+        this.getPerimeter = function () {
+            return (width + height) * 2;
+        }
+        this.createRectangle = function () {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = "#c6c6c6";
+            ctx.fillRect(20, 20, width, height);
+
+        }
+    }
+    let width = parseFloat(prompt("Nhập vào chiều rộng hình chữ nhật"));
+    let height = parseFloat(prompt("Nhập vào chiều cao hình chữ nhật"));
+    var rectangle = new Rectangle(width, height);
+
+    var area = rectangle.getArea();
+    var perimeter = rectangle.getPerimeter();
+    document.getElementById("result").innerHTML= ("The Area is " + area+ "<br>"+"The Perimeter is " + perimeter);
+    rectangle.createRectangle();
+
+</script>
+
+</html>

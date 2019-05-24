@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+
+<body>
+    <div>
+        <h2>SONY</h2>
+        <button id="power_btn" onclick="androi.turn()" value="OFF">ON/OFF</button>
+        <div id="status_sony">Trạng Thái</div>
+        <div id="battery_sony">% Pin</div>
+        <button id="typing_btn" onclick="androi.show_typing()">Typing-Message</button>
+        <button id="inbox_btn" onclick="androi.show_inbox()">Inbox-Message</button>
+        <button id="sent_btn" onclick="androi.show_sent()">Sent-Message</button>
+        <hr>
+        <div id="resultSONY"></div>
+    </div>
+    <div>
+        <h2>IPHONE</h2>
+        <button id="typing_btn" onclick="ios.show_typing()">Typing-Message</button>
+        <button id="inbox_btn" onclick="ios.show_inbox()">Inbox-Message</button>
+        <button id="sent_btn" onclick="ios.show_sent()">Sent-Message</button>
+        <hr>
+        <div id="resultIPHONE"></div>
+    </div>
+</body>
+<script>
+
+
+    
+    function Sony() {
+        this.arr_Storage_Typing = [];
+        this.arr_Storage_Inbox = [];
+        this.arr_Storage_Sent = [];
+        this.status;
+        this.battery = 100;
+        this.checkStatus = function () {
+            return this.status == true;
+        }
+
+        this.turn = function () {
+            value = document.getElementById("power_btn").value;
+            if (value == "OFF") {
+                this.status = true;    
+                document.getElementById("power_btn").value = "ON"
+            }
+            else {
+                document.getElementById("power_btn").value = "OFF"
+                this.status = false;
+            }
+            this.show_status();
+            this.battery--;
+            document.getElementById("battery_sony").innerHTML = "Battery: "+ this.battery+ "%";
+        }
+
+        this.show_status = function () {
+            status = document.getElementById("power_btn").value;
+            if (status == "ON") {
+                document.getElementById("status_sony").innerHTML = "Status: ON"
+            }
+            else { document.getElementById("status_sony").innerHTML = "Status:  OFF" }
+        }
+
+        this.show_typing = function () {
+            if (this.checkStatus()) {
+                this.battery--;
+                document.getElementById("battery_sony").innerHTML = "Battery: "+ this.battery+ "%";
+                document.getElementById("resultSONY").innerHTML = '<input id="typing"></input>' + '<button id="send_btn" onclick="sendtoIphone()" >Send</button>'
+            }
+        }
+        this.show_inbox = function () {
+            if (this.checkStatus()) {
+                this.battery--;
+                document.getElementById("battery_sony").innerHTML = "Battery: "+ this.battery+ "%";
+                document.getElementById("resultSONY").innerHTML = this.arr_Storage_Inbox;
+            }
+        }
+
+        this.show_sent = function () {
+            if (this.checkStatus()) {
+                this.battery--;
+                document.getElementById("battery_sony").innerHTML = "Battery: "+ this.battery+ "%";
+                document.getElementById("resultSONY").innerHTML = this.arr_Storage_Sent;
+            }
+        }
+    }
+
+    function Iphone() {
+        this.arr_Storage_Typing = [];
+        this.arr_Storage_Inbox = [];
+        this.arr_Storage_Sent = [];
+        this.show_typing = function () {
+            document.getElementById("resultIPHONE").innerHTML = '<input id="typing"></input>' + '<button id="send_btn" onclick="sendtoSony()" >Send</button>'
+        }
+        this.show_inbox = function () {
+            document.getElementById("resultIPHONE").innerHTML = this.arr_Storage_Inbox;
+        }
+
+        this.show_sent = function () {
+            document.getElementById("resultIPHONE").innerHTML = this.arr_Storage_Sent;
+        }
+    }
+
+
+    function sendtoIphone() {
+        let content = document.getElementById("typing").value;
+        ios.arr_Storage_Inbox.push(content);
+        androi.arr_Storage_Sent.push(content);
+        document.getElementById("typing").value='';
+        androi.battery--;
+        document.getElementById("battery_sony").innerHTML = "Battery: "+ androi.battery+ "%";
+    }
+
+    function sendtoSony() {
+        let content = document.getElementById("typing").value;
+        androi.arr_Storage_Inbox.push(content);
+        ios.arr_Storage_Sent.push(content);
+    }
+    androi = new Sony();
+    ios = new Iphone();
+
+</script>
+
+</html>

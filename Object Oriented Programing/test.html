@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+
+<body>
+    <div>
+        <h2>SONY</h2>
+        <button id="power_btn" onclick="androi.turn()" name="ON">ON/OFF</button>
+        <div id="status_sony">Trạng Thái</div>
+        <hr>
+        <div id="resultSONY">aa</div>
+    </div>
+</body>
+<script>
+    function Sony() {
+        this.turn = function () {
+            value = document.getElementById("power_btn").name;
+            console.log(value);
+            if (value == "ON") {
+                document.getElementById("power_btn").name = "OFF";
+            }
+            else {document.getElementById("power_btn").name = "ON"; 
+            }
+
+        }
+
+    }
+
+    androi = new Sony();
+
+
+</script>
+
+</html>

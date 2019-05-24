@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+    <p id="result"></p>
+    <input type="number" id="ad" oninput="test(this.value)"></input>
+</body>
+<script>
+    function Temperature(index) {
+        this.change_to_F = function () {
+            return (9 / 5 * index + 32)
+        }
+        this.change_to_Kenvin = function () {
+            return (index + 273.15)
+        }
+    }
+    // let index = parseFloat(prompt("Nhập nhiệt độ 'C "));
+
+    function test(aa){
+    let temperature = new Temperature(aa);
+    let tempF = temperature.change_to_F();
+    let tempK = temperature.change_to_Kenvin();
+    document.getElementById("result").innerHTML = ("F temperature is " + tempF + "<br>" + "Kenvin temperature is " + tempK);
+}
+</script>
+
+</html>
